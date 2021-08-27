@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Text to SVG</title>
+        <meta name="description" content="Convert plain text to a SVG, with different fonts, sizes and colors!">
+        <meta property="og:url" content="https://wackyblackie.github.io/text-to-svg/">
+        <meta property="og:title" content="Text to SVG">
+        <meta property="og:description" content="Convert plain text to a SVG, with different fonts, sizes and colors!">
+        <meta property="og:image" content="http://wackyblackie.github.io/text-to-svg/index.svg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="twitter:domain" content="wackyblackie.github.io">
+        <meta property="twitter:url" content="https://wackyblackie.github.io/text-to-svg/">
+        <meta name="twitter:title" content="Text to SVG">
+        <meta name="twitter:description" content="Convert plain text to a SVG, with different fonts, sizes and colors!">
+        <meta name="twitter:image" content="http://wackyblackie.github.io/text-to-svg/index.svg">
+		<link rel="canonical" href="https://wackyblackie.github.io/text-to-svg/">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    </head>
+	<body>
+		<header>
+			<div class="navbar navbar-dark bg-dark shadow-sm">
+				<div class="container">
+					<a href="#" class="navbar-brand d-flex align-items-center">
+						<img src="index.svg" alt="Text to SVG" height="30">
+					</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="py-5 text-center container">
+				<div class="row py-lg-5">
+					<div class="col-lg-6 col-md-8 mx-auto">
+						<h1 class="fw-light"><img src="index.svg" alt="Text to SVG" style="height: 3.5rem;"></h1>
+						<p class="lead text-muted">Convert plain text to a SVG, with different fonts, sizes and colors!</p>
+					</div>
+					<div class="container-fluid">
+						<form action="converted.html" method="get">
+							<div class="col-md-12">
+								<div class="row row-cards">
+									<div class="col-md-12">
+										<div class="card">
+											<div class="card-header">
+												<div class="row">
+													<div class="col">
+														<label>
+															Font:
+															<select class="form-select" style="display: inline-block;" name="font-family">
+																<option style="font-family: serif;">Serif</option>
+																<option style="font-family: sans-serif;">Sans-Serif</option>
+																<option style="font-family: cursive;">Cursive</option>
+																<option style="font-family: monospace;">Monospace</option>
+																<option style="font-family: fantasy;">Fantasy</option>
+															</select>
+														</label>
+													</div>
+													<div class="col border-start">
+														<label>
+															Font Size:
+															<div class="container-fluid"><input type="number" min="8" max="48" class="form-control" size="2" style="display: inline-table; width: 8ch;" name="font-size">pt</div>
+														</label>
+													</div>
+													<div class="col border-start">
+														Color:
+														<input type="color" class="form-control form-control-color position-relative translate-middle-x start-50" style="width: 10rem;" name="fill">
+													</div>
+													<div class="col border-start">
+														<label>
+															Size:
+															<div class="container-fluid">
+																<input placeholder="H" size="4" class="form-control" style="display: inline-table; width: 12ch;" type="number" max="1024" min="1" name="height" required> x
+																<input placeholder="W" size="4" class="form-control" style="display: inline-table; width: 12ch;" type="number" max="1024" min="1" name="width" required>
+															</div>
+														</label>
+													</div>
+												</div>
+											</div>
+											<textarea style="resize: none; border: none;" class="form-control" rows="5" autofocus name="text" id="text"></textarea>
+											<div class="card-footer">
+												<div class="row">
+													<div class="col"></div>
+													<div class="col"></div>
+													<div class="col border-start">
+														<input type="submit" value="Convert" class="btn btn-outline-success" style="width: 100%;" onsubmit="document.querySelector('#text').innerHTML = encodeURIComponent(document.querySelector('#text').innerHTML);">
+													</div>
+													<div class="col border-end">
+														<input type="reset" value="Reset" class="btn btn-outline-danger" style="width: 100%;">
+													</div>
+													<div class="col"></div>
+													<div class="col"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>			
+		</main>
+	</body>
+</html>
