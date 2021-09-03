@@ -1,0 +1,21 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgba(var(--bs-dark-rgb), 0.875) !important;
+        color: rgba(var(--bs-light-rgb), 1);
+    }
+    p.text-muted {
+        color: rgb(var(--bs-light-rgb)) !important;
+    }
+    .card-header, .card-footer {
+        background-color: rgba(0,0,0,0.705);
+    }
+    .form-control, .form-select {
+        background-color: rgba(var(--bs-dark-rgb), 0.625) !important;
+        color: rgb(var(--bs-light-rgb)) !important;
+    } .form-select {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23b0b8bf' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right .75rem center;
+        background-size: 16px 12px;
+    }
+}
